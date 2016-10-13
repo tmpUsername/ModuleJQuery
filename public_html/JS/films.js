@@ -4,4 +4,12 @@
  * and open the template in the editor.
  */
 
+var charge = function(){
+    
+};
 
+$(document).ready(function() {
+    $(':input').on("click", function () {
+       charge(); 
+    });
+});
