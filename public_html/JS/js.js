@@ -5,3 +5,13 @@
  */
 
 
+var chargeBloc = function (bloc) {
+    $('section').load(bloc);
+};
+
+
+$(document).ready(function () {
+    $('input').on("click", function () {
+        chargeBloc("bloc" + $(this).attr("value") + ".html");
+    });
+});
