@@ -6,11 +6,10 @@
 
 var charge = function(){
     $.getJSON("JSON/films.json", function(data) {
-        var res= "<ul>";
+        $("section").append("<table></table>");
         $.each(data.films, function (i, film){
-            res += "<li>" + film.titre + "</li>\n";
+            $("table").append("<tr><td>" + film.titre + "</td><td>" + film.synopsis + "</td></tr>");
         });
-        $('section').html(res + "</ul>");
     });
 };
 
