@@ -7,11 +7,10 @@ var change = true;
 
 $(document).ready(function(){
     $('input').on("click", function(){
-        if (change){
+        if ($("#change").css("display") == "block"){
             $("#change").hide();
         } else {
             $("#change").show();
         }
-        change = !change;
     });
 });
