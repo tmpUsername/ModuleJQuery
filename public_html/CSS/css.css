@@ -20,6 +20,7 @@ section{
 }
 
 table{
+    border-collapse: collapse;
     margin: auto;
 }
 
