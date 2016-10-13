@@ -5,7 +5,13 @@
  */
 
 var charge = function(){
-    
+    $.getJSON("JSON/films.json", function(data) {
+        var res= "<ul>";
+        $.each(data.films, function (i, film){
+            res += "<li>" + film.titre + "</li>\n";
+        });
+        $('section').html(res + "</ul>");
+    });
 };
 
 $(document).ready(function() {
