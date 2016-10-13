@@ -6,7 +6,9 @@
 
 var charge = function(){
     $.getJSON("JSON/films.json", function(data) {
-        $("section").append("<table></table>");
+        if ( $("section").has("table").length == 0 ){
+            $("section").append("<table></table>");
+        }
         data.films.forEach(function (film){
             $("table").append("<tr><td>" + film.id  + "</td><td>" + film.titre + "</td><td>" + film.synopsis + "</td></tr>");
         });
