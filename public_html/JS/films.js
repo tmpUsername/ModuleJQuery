@@ -7,10 +7,10 @@
 var charge = function(){
     $.getJSON("JSON/films.json", function(data) {
         if ( $("section").has("table").length == 0 ){
-            $("section").append("<table></table>");
+            $("section").append("<table><thead><tr><th>Id</th><th>Titre</th><th>Synopsis</th></tr></thead><tbody></tbody></table>");
         }
         data.films.forEach(function (film){
-            $("table").append("<tr><td>" + film.id  + "</td><td>" + film.titre + "</td><td>" + film.synopsis + "</td></tr>");
+            $("tbody").append("<tr><td>" + film.id  + "</td><td>" + film.titre + "</td><td>" + film.synopsis + "</td></tr>");
         });
     });
 };
