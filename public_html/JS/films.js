@@ -7,8 +7,8 @@
 var charge = function(){
     $.getJSON("JSON/films.json", function(data) {
         $("section").append("<table></table>");
-        $.each(data.films, function (i, film){
-            $("table").append("<tr><td>" + film.titre + "</td><td>" + film.synopsis + "</td></tr>");
+        data.films.forEach(function (film){
+            $("table").append("<tr><td>" + film.id  + "</td><td>" + film.titre + "</td><td>" + film.synopsis + "</td></tr>");
         });
     });
 };
