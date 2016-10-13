@@ -14,3 +14,16 @@ body{
 header{
     margin-bottom: 20px;
 }
+
+section{
+    text-align: center;
+}
+
+table{
+    margin: auto;
+}
+
+td{
+    border: solid 1px black;
+    width: 8%;
+}
