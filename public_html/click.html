@@ -14,7 +14,8 @@ and open the template in the editor.
             
             var maFonction = function() {
                 $('input').click(function (event) {
-                    alert('clic');
+                    $(event.target).css('background-color','red');
+                    alert(event.target.value);
                 });
             };
             
