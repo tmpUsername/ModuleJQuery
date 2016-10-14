@@ -12,20 +12,17 @@ and open the template in the editor.
         <script src="JS/jquery-3.1.1.js" type="text/javascript"></script>
         <script type="text/javascript">
             
-            var maFonction = function () {
-                alert("Coucou");
+            var maFonction = function() {
+                $('input').click(function (event) {
+                    alert('clic');
+                });
             };
             
-            $(document).ready(function(){
-                $('input').on("click", maFonction);
-            });
-            
-            
-            
+            $(document).ready(maFonction);
         </script>
     </head>
     <body>
-        <input type="button" value="A"/>
-        <input type="button" value="B"/>
+        <input type="button" value="Bouton A"/>
+        <input type="button" value="Bouton B"/>
     </body>
 </html>
